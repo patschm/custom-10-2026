@@ -20,8 +20,8 @@ internal class Beurt
         Woord word = new Woord(guess!);
         if (word.IsValid)
         {
-            AddGuess(word);
            _wordToBeGuessed.Evaluate(word);
+            AddGuess(word);
             IsGeraden = word == _wordToBeGuessed;
         }
         return word;
@@ -42,7 +42,7 @@ internal class Beurt
         {
             if (_history[i] == null)
             {
-                _history[i] = word;
+                _history[i] = new Woord(word);
                 return;
             }
         }

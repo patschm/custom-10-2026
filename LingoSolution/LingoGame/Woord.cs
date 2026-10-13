@@ -9,10 +9,33 @@ internal class Woord
         _word = new Letter[word.Length];
         for (int i = 0; i < word.Length; i++)
         {
-            _word[i] = new Letter { Character = word[i], Position = i };
+            _word[i] = new Incorrect { Character = word[i], Position = i };
         }
     }
+    public Woord(Woord word)
+    {
+        _word = new Letter[word.Length];
+        for(int i = 0;i < word.Length;i++)
+        {
+            _word[i] = word[i].Clone();
+        }
+    }
+    public Letter this[int idx]
+    {
+        get
+        {
+            if (idx >= 0 && idx < _word.Length)
+                return _word[idx];
+            throw new IndexOutOfRangeException();
+        }
+        set
+        {
+            if (idx >= 0 && idx < _word.Length)
+                _word[idx] = value;
+            else throw new IndexOutOfRangeException();
 
+        }
+    }
     public int Length
     {
         get { return _word.Length; }
@@ -39,13 +62,30 @@ internal class Woord
     }
 
     public bool IsValid { get { return _word.Length == 5; } }
-    public bool Evaluate(Woord? guess)
+    public void Evaluate(Woord guess)
     {
-        for (int i = 0; i < guess?._word.Length; i++)
-        {
-            if (_word[i].Character != guess._word[i].Character) return false;
-            _word[i]._match = MatchResult.Correct;
+        CharCounter counter = new CharCounter(this);
+        for (int i = 0; i < guess.Length; i++) 
+        { 
+            if (_word[i] == guess[i])
+            {
+                guess[i] = new Correct { Character = _word[i].Character, Position = _word[i].Position };
+                counter.Decrement(guess[i]);
+            }
         }
-        return true;
+        for (int i = 0; i < guess.Length; i++)
+        {
+            if (guess[i] is Correct) continue;
+            if (!counter.CanUse(guess[i])) continue;
+            foreach (Letter letter in _word)
+            {
+                if (letter.Character == guess[i].Character)
+                {
+                    guess[i] = new WrongPosition { Character = letter.Character, Position = letter.Position };
+                    counter.Decrement(guess[i]);
+                    break;
+                }
+            }
+        }
     }
 }

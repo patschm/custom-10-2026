@@ -2,7 +2,8 @@
 
 
 // Class is een _blauwdruk_ van een object (custom type)
-internal class Lamp
+// Abstract voorkomt dat je new Lamp() kunt doen.
+internal abstract class Lamp
 {
     // Fields. Hierin slaan we de eigenschappen van een object op.
     //private string name = "Lamp";
@@ -51,17 +52,17 @@ internal class Lamp
 
 
     // Methods (veredelde functie of procedures)
-    public void On()
+    // Met virtual geef ik aan dat dit gedrag polymorf-ready
+    // virtual is optioneel, een afgeleide class HOEFT NIET te overriden
+    public virtual void On()
     {
+        
         Console.BackgroundColor = Color;
         Console.WriteLine($"De lamp ({Name}) is nu aan en brandt met {Intensity}lm");
     }
-    public void Off()
-    {
-        Console.WriteLine("De lamp gaat uit");
-        Console.ResetColor();
-
-    }
+    // Als je het optioneel overriden wilt verplichten, gebruik dan abstract.
+    // Een abstracte methode heeft geen implementatie
+    public abstract void Off();
 
     // Constructors
     // Zijn bedoeld om _field_ een initiele waarde te geven.

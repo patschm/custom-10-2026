@@ -1,12 +1,11 @@
 ﻿namespace LingoGame;
 
-internal class Letter
+internal abstract class Letter
 {
 	private char _character;
 	private int _position;
-	public MatchResult _match = MatchResult.Incorrect;
+	//public MatchResult _match = MatchResult.Incorrect;
 
-	public ConsoleColor Color { get; set; } = ConsoleColor.Blue;
     public int Position
 	{
 		get { return _position; }
@@ -32,10 +31,13 @@ internal class Letter
 	{
 		return !( left == right);
 	}
-	public void Teken()
-	{
-		Console.BackgroundColor = Color;
-        Console.Write(_character);
-		Console.ResetColor();
-	}
+	public abstract void Teken();
+	//{
+	//	Console.BackgroundColor = Color;
+	//       Console.Write(_character);
+	//	Console.ResetColor();
+	//}
+
+	public abstract Letter Clone();
+	
 }
