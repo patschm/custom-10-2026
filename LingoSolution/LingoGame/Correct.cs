@@ -11,11 +11,12 @@ internal class Correct : Letter
         return new Correct {  Character = this.Character, Position = this.Position };
     }
 
-    public override void Teken()
+    public override void Teken(IDevice device)
     {
-        Console.BackgroundColor = ConsoleColor.Green;
-        Console.ForegroundColor = ConsoleColor.White;
-        Console.Write(Character);
-        Console.ResetColor();
+        device.TekenCorrect(Character);
+        //Console.BackgroundColor = ConsoleColor.Green;
+        //Console.ForegroundColor = ConsoleColor.White;
+        //Console.Write(Character);
+        //Console.ResetColor();
     }
 }

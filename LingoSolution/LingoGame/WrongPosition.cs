@@ -6,11 +6,12 @@ internal class WrongPosition : Letter
     {
         return new WrongPosition { Character = this.Character, Position = this.Position };
     }
-    public override void Teken()
+    public override void Teken(IDevice device)
     {
-        Console.BackgroundColor = ConsoleColor.DarkYellow;
-        Console.ForegroundColor = ConsoleColor.Black;
-        Console.Write(Character);
-        Console.ResetColor();
+        device.TekenWrongPosition(Character);
+        //Console.BackgroundColor = ConsoleColor.DarkYellow;
+        //Console.ForegroundColor = ConsoleColor.Black;
+        //Console.Write(Character);
+        //Console.ResetColor();
     }
 }

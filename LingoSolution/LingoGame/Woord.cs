@@ -41,9 +41,9 @@ internal class Woord
         get { return _word.Length; }
     }
 
-    public void Show()
+    public void Show(IDevice device)
     {
-        foreach (Letter letter in _word) letter.Teken();
+        foreach (Letter letter in _word) letter.Teken(device);
         Console.WriteLine();
     }
     public static bool operator !=(Woord left, Woord right)

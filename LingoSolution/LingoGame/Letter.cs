@@ -31,7 +31,7 @@ internal abstract class Letter
 	{
 		return !( left == right);
 	}
-	public abstract void Teken();
+	public abstract void Teken(IDevice device);
 	//{
 	//	Console.BackgroundColor = Color;
 	//       Console.Write(_character);
