@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DeLampen/DeLampen.csproj" />
+  <Project Path="LingoGame/LingoGame.csproj" />
+</Solution>
