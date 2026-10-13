@@ -1,6 +1,6 @@
 ﻿namespace LingoGame;
 
-internal class Game
+public class Game
 {
     private Speler? _speler1 = null;
     private Speler? _speler2 = null;

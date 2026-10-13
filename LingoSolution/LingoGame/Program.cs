@@ -1,15 +1,15 @@
 ﻿namespace LingoGame;
 
-internal class Program
-{
-    static void Main(string[] args)
-    {
-        Speler sp1 = new Speler("Jan");
-        Speler sp2 = new Speler("Kees");
+//internal class Program
+//{
+//    static void Main(string[] args)
+//    {
+//        Speler sp1 = new Speler("Jan");
+//        Speler sp2 = new Speler("Kees");
 
-        Game game1 = new Game();
-        game1.Register(sp2);
-        game1.Register(sp1);
-        game1.Start();
-    }
-}
+//        Game game1 = new Game();
+//        game1.Register(sp2);
+//        game1.Register(sp1);
+//        game1.Start();
+//    }
+//}
