@@ -1,6 +1,9 @@
 <Solution>
   <Project Path="DeRadio/DeRadio.csproj" />
+  <Project Path="EvolutieTheorie/EvolutieTheorie.csproj" Id="159a0973-6494-495a-9623-2edba7b91863" />
+  <Project Path="Link/Link.csproj" Id="395a48e5-058b-43ae-8fb7-4a61332f7728" />
   <Project Path="MeerInteractie/MeerInteractie.csproj" />
+  <Project Path="TechoTalk/TechoTalk.csproj" Id="a6b2c426-995e-46de-ad1d-52092cf097d8" />
   <Project Path="TestForm/TestForm.csproj" />
   <Project Path="WillieWortel/WillieWortel.csproj" />
 </Solution>

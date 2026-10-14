@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DeRest/DeRest.csproj" />
+  <Project Path="Houston/Houston.csproj" />
+</Solution>
