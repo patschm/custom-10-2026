@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="ConsoleLingo/ConsoleLingo.csproj" Id="8f06792a-6489-46c0-b792-8f7441fe868b" />
   <Project Path="LingoGame/LingoGame.csproj" />
+  <Project Path="WpfLingo/WpfLingo.csproj" />
 </Solution>

@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="DeRadio/DeRadio.csproj" />
+  <Project Path="MeerInteractie/MeerInteractie.csproj" />
+  <Project Path="TestForm/TestForm.csproj" />
+  <Project Path="WillieWortel/WillieWortel.csproj" />
+</Solution>

@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="DoomsdayPreppers/DoomsdayPreppers.csproj" />
+  <Project Path="Heras/Heras.csproj" />
+  <Project Path="HikVision/HikVision.csproj" />
+  <Project Path="Oprijlaan/Oprijlaan.csproj" />
+  <Project Path="Philips/Philips.csproj" />
+  <Project Path="Standaarden/Standaarden.csproj" Id="34b4505c-3b2f-4fb3-a496-064a01563276" />
+  <Project Path="Yunex/Yunex.csproj" />
+</Solution>
